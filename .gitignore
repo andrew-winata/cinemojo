@@ -1,0 +1,15 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+app/libs/facebook/
+gcmsender/
+.idea
+*.iml
+*.class
+app/release
+app/*/debug
+app/*/release
+buildSrc/build/libs/buildSrc.jar

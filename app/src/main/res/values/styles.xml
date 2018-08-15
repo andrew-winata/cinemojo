@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:colorForeground">@color/foreground_material_dark</item>
+    </style>
+
+    <style name="TextView.H1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h1</item>
+        <item name="android:lineSpacingExtra">-1.5sp</item>
+    </style>
+
+    <style name="TextView.H2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h2</item>
+        <item name="android:lineSpacingExtra">-0.5sp</item>
+    </style>
+
+    <style name="TextView.H3" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h3</item>
+    </style>
+
+    <style name="TextView.H4" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h4</item>
+        <item name="android:lineSpacingExtra">0.25sp</item>
+    </style>
+
+    <style name="TextView.H5" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h5</item>
+    </style>
+
+    <style name="TextView.H6" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_h6</item>
+        <item name="android:lineSpacingExtra">0.15sp</item>
+    </style>
+
+    <style name="TextView.Subtitle1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_subtitle_1</item>
+        <item name="android:lineSpacingExtra">0.15sp</item>
+    </style>
+
+    <style name="TextView.Subtitle2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_subtitle_2</item>
+        <item name="android:lineSpacingExtra">0.1sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Body1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_body_1</item>
+        <item name="android:lineSpacingExtra">0.5sp</item>
+    </style>
+
+    <style name="TextView.Body2" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_body_2</item>
+        <item name="android:lineSpacingExtra">0.25sp</item>
+    </style>
+
+    <style name="TextView.Caption" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_caption</item>
+        <item name="android:lineSpacingExtra">0.4sp</item>
+    </style>
+
+
+</resources>
