@@ -1,4 +1,4 @@
-package com.blibli.cinemojo;
+package com.cinemojo;
 
 import org.junit.Test;
 

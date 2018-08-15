@@ -1,4 +1,4 @@
-package com.blibli.cinemojo;
+package com.cinemojo;
 
 import android.content.Context;
 import android.support.multidex.MultiDex;

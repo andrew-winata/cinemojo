@@ -66,5 +66,9 @@
         <item name="android:lineSpacingExtra">0.4sp</item>
     </style>
 
+    <style name="Button.Ghost" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@drawable/text_color_button_ghost</item>
+        <item name="android:background">@drawable/background_button_ghost</item>
+    </style>
 
 </resources>
