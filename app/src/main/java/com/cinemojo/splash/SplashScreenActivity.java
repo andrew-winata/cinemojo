@@ -20,7 +20,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         viewBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash_screen);
         Handler handler = new Handler();
         handler.postDelayed(() -> {
-            Router.goToLogin(this);
+            Router.goToHome(this);
+            finish();
         }, 3000);
     }
 }

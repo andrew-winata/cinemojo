@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cinemojo</string>
+    <string name="welcome_profile">Welcome, %s</string>
 </resources>
