@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class PopularMovieResponse {
+public class MovieResponse {
     private int id;
 
     @SerializedName("poster_path")

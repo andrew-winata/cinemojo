@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.cinemojo.CinemojoApplication;
 import com.cinemojo.R;
 import com.cinemojo.core.repository.LoginSessionRepository;
+import com.cinemojo.core.util.Router;
 import com.cinemojo.databinding.ActivityProfileBinding;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -22,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
         viewBinding.textWelcome.setText(getString(R.string.welcome_profile, loginSessionRepository.getUsername()));
         viewBinding.buttonSignOut.setOnClickListener(__ -> {
             loginSessionRepository.signOut();
-            this.finish();
+            Router.goToHome(this);
         });
     }
 }

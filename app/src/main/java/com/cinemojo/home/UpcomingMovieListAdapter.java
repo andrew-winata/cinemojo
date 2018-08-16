@@ -13,15 +13,15 @@ import com.cinemojo.R;
 import com.cinemojo.core.ApiPath;
 import com.cinemojo.core.adapter.BaseRecyclerViewAdapter;
 import com.cinemojo.core.glide.GlideApp;
-import com.cinemojo.core.model.PopularMovieResponse;
-import com.cinemojo.databinding.ItemListPopularMovieBinding;
+import com.cinemojo.core.model.MovieResponse;
+import com.cinemojo.databinding.ItemListUpcomingMovieBinding;
 
 import java.util.List;
 
-public class PopularMoviesAdapter extends
-        BaseRecyclerViewAdapter<PopularMovieResponse, PopularMoviesAdapter.ViewHolder> {
+public class UpcomingMovieListAdapter extends
+        BaseRecyclerViewAdapter<MovieResponse, UpcomingMovieListAdapter.ViewHolder> {
 
-    public PopularMoviesAdapter(List<PopularMovieResponse> items) {
+    public UpcomingMovieListAdapter(List<MovieResponse> items) {
         super(items);
     }
 
@@ -29,14 +29,14 @@ public class PopularMoviesAdapter extends
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_list_popular_movie, parent, false);
-        return new ViewHolder(itemView);
+                .inflate(R.layout.item_list_upcoming_movie, parent, false);
+        return new UpcomingMovieListAdapter.ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PopularMovieResponse movie = items.get(position);
-        holder.itemBinding.textRating.setText(String.valueOf(movie.getVoteAverage()));
+        MovieResponse movie = items.get(position);
+        holder.itemBinding.textReleaseDate.setText(movie.getReleaseDate());
         Context context = holder.itemBinding.layoutItemContainer.getContext();
         GlideApp.with(context)
                 .load(ApiPath.TMDB_IMAGE_BASE_URL + movie.getPosterPath())
@@ -44,11 +44,8 @@ public class PopularMoviesAdapter extends
                 .into(holder.itemBinding.imgMoviePoster);
     }
 
-
-
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-        ItemListPopularMovieBinding itemBinding;
+        ItemListUpcomingMovieBinding itemBinding;
 
         public ViewHolder(View itemView) {
             super(itemView);

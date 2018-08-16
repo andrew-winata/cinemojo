@@ -21,7 +21,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             Router.goToHome(this);
-            finish();
         }, 3000);
     }
 }
