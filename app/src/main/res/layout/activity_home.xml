@@ -18,113 +18,107 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways"/>
 
-            <!--<android.support.design.widget.TabLayout-->
-                <!--android:id="@+id/tabs"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content" />-->
         </android.support.design.widget.AppBarLayout>
 
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:orientation="vertical">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/layout_popular_movies_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/text_title_popular_movies"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/TextView.H6"
-                    android:paddingStart="16dp"
-                    android:paddingTop="32dp"
-                    android:text="Most Popular Movies"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/list_popular_movies"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clipToPadding="false"
-                    app:layout_constraintTop_toBottomOf="@+id/text_title_popular_movies"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
-            </android.support.constraint.ConstraintLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/layout_now_playing_movies_content"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/text_title_now_playing"
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout_popular_movies_content"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/TextView.H6"
-                    android:paddingStart="16dp"
-                    android:paddingTop="32dp"
-                    android:text="Now Playing"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    android:layout_height="wrap_content">
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/list_now_playing_movies"
+                    <TextView
+                        android:id="@+id/text_title_popular_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView.H6"
+                        android:paddingStart="16dp"
+                        android:paddingTop="32dp"
+                        android:text="Most Popular Movies"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_popular_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_popular_movies"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout_now_playing_movies_content"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clipToPadding="false"
-                    app:layout_constraintTop_toBottomOf="@+id/text_title_now_playing"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    android:layout_height="wrap_content">
 
-            </android.support.constraint.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/text_title_now_playing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView.H6"
+                        android:paddingStart="16dp"
+                        android:paddingTop="32dp"
+                        android:text="Now Playing"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/layout_upcoming_movies_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_now_playing_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_now_playing"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-                <TextView
-                    android:id="@+id/text_title_upcoming"
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout_upcoming_movies_content"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/TextView.H6"
-                    android:paddingStart="16dp"
-                    android:paddingTop="32dp"
-                    android:text="Now Playing"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    android:layout_height="wrap_content">
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/list_upcoming_movies"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clipToPadding="false"
-                    app:layout_constraintTop_toBottomOf="@+id/text_title_upcoming"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                        android:id="@+id/text_title_upcoming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView.H6"
+                        android:paddingStart="16dp"
+                        android:paddingTop="32dp"
+                        android:text="Upcoming"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
 
-            </android.support.constraint.ConstraintLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_upcoming_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_upcoming"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-        </LinearLayout>
-
-
-
-        <!--<android.support.v4.view.ViewPager-->
-            <!--android:id="@+id/pager"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
-
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        
     </android.support.design.widget.CoordinatorLayout>
 </layout>
